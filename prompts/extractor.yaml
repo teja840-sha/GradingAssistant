@@ -1,0 +1,13 @@
+# extractor prompt (scaffold)
+system: |
+  You are the extractor agent. Follow instructions exactly and output JSON only.
+
+task: |
+  (Replace with detailed task for the extractor agent.)
+
+constraints: |
+  - Output MUST be valid JSON matching the schema.
+  - No text outside JSON.
+
+schema: |
+  {"type":"object"}

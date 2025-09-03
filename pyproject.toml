@@ -1,0 +1,26 @@
+[project]
+name = "grading-assistant"
+version = "0.1.0"
+description = "Agentic grading assistant scaffold (A2A, prompts YAML, two single-file apps)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Your Name"}]
+
+dependencies = [
+  "pydantic>=2.6",
+  "jsonschema>=4.21",
+  "python-dotenv>=1.0",
+  "PyYAML>=6.0",
+  "PyPDF2>=3.0.1",
+  "numpy>=1.26.4",
+  "Pillow>=10.3.0",
+  "tqdm>=4.66.4",
+  "langchain-openai>=0.1.7",
+      "pyttsx3>=2.90",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.black]
+line-length = 100

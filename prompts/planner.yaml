@@ -1,0 +1,13 @@
+# planner prompt (scaffold)
+system: |
+  You are the planner agent. Follow instructions exactly and output JSON only.
+
+task: |
+  (Replace with detailed task for the planner agent.)
+
+constraints: |
+  - Output MUST be valid JSON matching the schema.
+  - No text outside JSON.
+
+schema: |
+  {"type":"object"}

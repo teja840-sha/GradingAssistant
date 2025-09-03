@@ -1,0 +1,13 @@
+# classifier prompt (scaffold)
+system: |
+  You are the classifier agent. Follow instructions exactly and output JSON only.
+
+task: |
+  (Replace with detailed task for the classifier agent.)
+
+constraints: |
+  - Output MUST be valid JSON matching the schema.
+  - No text outside JSON.
+
+schema: |
+  {"type":"object"}

@@ -1,0 +1,25 @@
+# environments
+.venv/
+.env
+.env.*
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# outputs & temp
+outputs/
+samples/outputs/
+*.mp4
+*.wav
+*.mp3
+*.srt
+*.avi
+temp/
+
+# models/weights
+*.pth
+third_party/
