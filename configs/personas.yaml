@@ -14,7 +14,7 @@ science:
   tts_voice_hint: "female_european"
 
 social_studies:
-  name: "B. R. Ambedkar"
+  name: "Gandhi"
   avatar_path: "assets/social_studies.jpg"
   tts_voice_hint: "male_indian_formal"
 
