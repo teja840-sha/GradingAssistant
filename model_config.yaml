@@ -1,0 +1,20 @@
+# Example: create a .env file (do NOT commit) with:
+#   AZURE_OPENAI_API_KEY="..."
+#   AZURE_OPENAI_ENDPOINT="https://your-endpoint.openai.azure.com/"
+#   AZURE_OPENAI_DEPLOYMENT="gpt-4.1"
+#   AZURE_OPENAI_MODEL="gpt-4.1"
+#   AZURE_OPENAI_API_VERSION="2024-06-01"
+#   AZURE_OPENAI_TEMPERATURE="0.0"
+#   AZURE_OPENAI_TOP_P="1.0"
+#   AZURE_OPENAI_SEED="1"
+#
+provider: autogen_ext.models.openai.AzureOpenAIChatCompletionClient
+config:
+  model: gpt-4.1
+  api_key: 6f34805ef7664738a6fd0e7345510598
+  azure_endpoint: https://srch-nvi-genwizard-devres.openai.azure.com/
+  azure_deployment: gpt-4.1
+  api_version: "2024-06-01"
+  temperature: 0.0    
+  top_p: 1.0
+  seed: 1

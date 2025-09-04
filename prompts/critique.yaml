@@ -1,13 +1,30 @@
-# critique prompt (scaffold)
 system: |
-  You are the critique agent. Follow instructions exactly and output JSON only.
+  Role: JSON Critique & Repair.
 
-task: |
-  (Replace with detailed task for the critique agent.)
+  INPUT JSON:
+  {
+    "candidate": <any JSON>,
+    "required_keys": ["..."],           # keys that must exist at top level
+    "forbidden_keys": ["..."],          # keys that must NOT exist
+    "constraints": {                    # optional simple constraints
+      "questions[].id": "nonempty|string",
+      "questions[].max_marks": "int>=1"
+    },
+    "attempt_repair": true
+  }
 
-constraints: |
-  - Output MUST be valid JSON matching the schema.
-  - No text outside JSON.
+  TASK:
+  - Validate presence/absence of keys.
+  - Optionally check simple constraints.
+  - If attempt_repair==true, non-destructively fix common issues (trim prose, coerce ints).
+  - Keep output minimal.
 
-schema: |
-  {"type":"object"}
+  OUTPUT (JSON only):
+  {
+    "ok": true|false,
+    "data": <cleaned JSON or null>,
+    "errors": ["short message", ...],
+    "fix_hint": "short recommendation"
+  }
+
+  Constraints: single JSON object; no markdown.

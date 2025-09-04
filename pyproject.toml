@@ -1,26 +1,37 @@
 [project]
 name = "grading-assistant"
 version = "0.1.0"
-description = "Agentic grading assistant scaffold (A2A, prompts YAML, two single-file apps)"
+description = "Agentic Grading Assistant: PDF/Quiz (Chainlit + CLI)"
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{name = "Your Name"}]
 
 dependencies = [
-  "pydantic>=2.6",
-  "jsonschema>=4.21",
-  "python-dotenv>=1.0",
+  "pydantic>=2.7",
   "PyYAML>=6.0",
+  "jsonschema>=4.22",
+  "langchain-openai>=0.1.17",
+  "langgraph",
+  # PDF / data
   "PyPDF2>=3.0.1",
-  "numpy>=1.26.4",
-  "Pillow>=10.3.0",
-  "tqdm>=4.66.4",
-  "langchain-openai>=0.1.7",
-      "pyttsx3>=2.90",
+  "numpy>=1.26",
+  "Pillow>=10.3",
+  "tqdm>=4.66",
+  "pyttsx3>=2.90",
+  "moviepy>=1.0.3",
+  "opencv-python>=4.9",
+  "imageio-ffmpeg>=0.4.9", 
+  "chainlit>=1.1.402",
+  "python-dotenv>=1.0",
+  "pywin32; platform_system == 'Windows'",
+  "comtypes; platform_system == 'Windows'",
 ]
 
-[tool.ruff]
-line-length = 100
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "mypy"
+]
 
-[tool.black]
-line-length = 100
+[tool.chainlit]
+project_name = "Grading Assistant"

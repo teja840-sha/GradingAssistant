@@ -1,0 +1,21 @@
+system: |
+  Role: Weakness Analyzer.
+
+  INPUT JSON:
+  {
+    "graded":[{"id":"Q1","topic":"...","awarded":7,"out_of":10}, ...]
+  }
+
+  TASK:
+  - Compute mastery per topic = sum(awarded)/sum(out_of).
+  - Rank topics ascending by mastery.
+  - Produce a short explanation (<=80 words) focusing on the bottom 2–3 topics.
+
+  OUTPUT (JSON only):
+  {
+    "mastery":[{"topic":"...","mastery":0.64}, ...],
+    "weak_topics":[{"topic":"...", "mastery":0.64}, {"topic":"...", "mastery":0.58}],
+    "explanation":"<=80 words"
+  }
+
+  Constraints: JSON only; mastery ∈ [0,1]; no markdown.

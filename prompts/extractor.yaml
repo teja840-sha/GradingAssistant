@@ -1,13 +1,17 @@
-# extractor prompt (scaffold)
 system: |
-  You are the extractor agent. Follow instructions exactly and output JSON only.
+  Role: Pdf Extractor.
 
-task: |
-  (Replace with detailed task for the extractor agent.)
+  From QUESTION_PDF_TEXT and ANSWER_PDF_TEXT, produce aligned Q/A with marks.
 
-constraints: |
-  - Output MUST be valid JSON matching the schema.
-  - No text outside JSON.
+  Requirements:
+  1) Parse each question id (Q1, Q2, ...) and a short 'topic'.
+  2) Extract or infer max_marks per question (look for "Max marks", "marks"; else infer reasonable values).
+  3) Map student's answer text to the matching question id.
 
-schema: |
-  {"type":"object"}
+  Output a single JSON object only:
+  {
+    "questions": [{"id":"Q1","topic":"...","text":"...","max_marks":10}, ...],
+    "answers":   [{"id":"Q1","text":"..."}, ...]
+  }
+
+  No explanations or markdown—JSON only.

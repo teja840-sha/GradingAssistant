@@ -1,0 +1,24 @@
+mathematics:
+  name: "Srinivasa Ramanujan"
+  avatar_path: "assets/mathematics.jpg"
+  tts_voice_hint: "male_calm_indian"
+
+english_language_arts:
+  name: "William Shakespeare"
+  avatar_path: "assets/english.jpg"
+  tts_voice_hint: "male_british"
+
+science:
+  name: "Marie Curie"
+  avatar_path: "assets/science.jpg"
+  tts_voice_hint: "female_european"
+
+social_studies:
+  name: "B. R. Ambedkar"
+  avatar_path: "assets/social_studies.jpg"
+  tts_voice_hint: "male_indian_formal"
+
+computer_science:
+  name: "Alan Turing"
+  avatar_path: "assets/computer_science.jpg"
+  tts_voice_hint: "male_british_formal"
